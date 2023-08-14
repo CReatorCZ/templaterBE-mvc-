@@ -1,0 +1,18 @@
+search:
+	-
+		in: %appDir%
+		classes:
+			- *Factory
+			- *Facade
+
+
+services:
+	- App\Router\RouterFactory::createRouter
+	- App\Classes\GetList
+	- App\Classes\CreatePerson
+	- App\Classes\DeletePerson
+	- App\Classes\UpdatePerson
+	- App\Classes\CreatePDF
+	- App\Classes\MyValidators
+	- App\Classes\ExportDatabase
+	- App\Classes\ImportDatabase

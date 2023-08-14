@@ -1,0 +1,71 @@
+{block content}
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <h1 n:block=title>Database</h1>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="mt-4 mr-3">
+                <form n:name=importDatabase class="form-group align-items-center d-flex" id="importForm">
+                    <label for="fileInput" class="btn btn-info">
+                        Import
+                        <input type="file" id="fileInput" name="file" class="d-none">
+                    </label>
+                </form>
+            </div>
+            <div class="mr-3">
+                <form method="post" action="{link exportDatabase!, variable => $variable}">
+                    <button type="submit" class="btn btn-info">Export</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Jméno</th>
+            <th>Email</th>
+            <th>Věk</th>
+            <th>Den</th>
+            <th>ID</th>
+            <th>Upravit</th>
+            <th>Smazat</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr n:foreach="$variable as $row">
+
+            <td>{$row->firstName}</td>
+            <td>{$row->email}</td>
+            <td>{$row->age}</td>
+            <td>{$row->day}</td>
+            <td>{$row->id}</td>
+            <td>
+                <form method="post" action="{link update, id => $row->id}">
+                    <button type="submit">Upravit</button>
+                </form>
+            </td>
+            <td>
+                <form method="post" action="{link delete!, id => $row->id}"
+                      onsubmit="return confirm('Opravdu mažeme?');">
+                    <button type="submit">Smazat</button>
+                </form>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const importForm = document.getElementById("importForm");
+            const fileInput = document.getElementById("fileInput");
+
+            fileInput.addEventListener("change", function () {
+                importForm.submit();
+            });
+        });
+    </script>
+
+{/block}

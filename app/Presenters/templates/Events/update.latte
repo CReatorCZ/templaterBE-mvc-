@@ -1,0 +1,74 @@
+{block content}
+<table>
+    <tbody>
+    <tr>
+        <td>jmeno: {$person->firstName}</td>
+        <td>email: {$person->email}</td>
+        <td>věk: {$person->age}</td>
+        <td>den: {$person->day}</td>
+        <td>id: {$person->id}</td>
+    </tr>
+    </tbody>
+</table>
+{*    <h1 n:block=title>Update</h1>*}
+{*    <form n:name=registrationForm class=form>*}
+{*        <div>*}
+{*            <label n:name=name class="col-2 col-form-label">Jméno: <input n:name=name size=20 class="form-control" autofocus></label>*}
+{*        </div>*}
+{*        <div>*}
+{*            <label n:name=email class="col-2 col-form-label">E-mail: <input n:name=email size=30 class="form-control"></label>*}
+{*        </div>*}
+{*        <div>*}
+{*            <label n:name=age class="col-2 col-form-label">Věk: <input n:name=age size=5 class="form-control col-6"></label>*}
+{*            *}{*            <span class=error n:ifcontent>{inputError age}</span>*}
+{*        </div>*}
+{*        <div>*}
+{*            <label n:name=day class="col-2 col-form-label">Den: <select n:name=day class="form-control"></select> </label>*}
+{*        </div>*}
+{*        <div>*}
+{*            <input type="submit" n:name=send class="col-2 col-form-label btn btn-primary">*}
+{*        </div>*}
+{*    </form>*}
+    <div class="container">
+        <div class="row justify-content-center my-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 n:block=title>Update</h1>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+                        <form n:name=registrationForm class="form">
+                            <div class="d-flex form-group col-12" style="margin: 2">
+                                <label for="inputName" n:name=name class="col-form-label">Jméno:
+                                    <input id="inputName" n:name=name class="form-control" autofocus>
+                                </label>
+                            </div>
+                            <div class="d-flex form-group col-12">
+                                <label for="inputEmail" n:name=email class="col-form-label">E-mail:
+                                    <input id="inputEmail" n:name=email class="form-control">
+                                </label>
+                                <span class=error n:ifcontent>{inputError email}</span>
+                            </div>
+                            <div class="d-flex form-group col-12 justify-content-between">
+                                <div class="form-group col-4" style="padding: 0">
+                                    <label for="inputAge" n:name=age class="col-form-label">Věk:
+                                        <input id="inputAge" n:name=age  class="form-control">
+                                    </label>
+                                    <span class=error n:ifcontent>{inputError age}</span>
+                                </div>
+                                <div class="form-group col-7 " style="padding: 0" >
+                                    <label for="inputDay" n:name=day class="col-form-label">Den:
+                                        <select id="inputDay" n:name=day class="form-control"></select>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="d-flex form-group col-12">
+                                <input type="submit" n:name=send class="col-form-label btn btn-primary btn-lg btn-block">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{/block}
