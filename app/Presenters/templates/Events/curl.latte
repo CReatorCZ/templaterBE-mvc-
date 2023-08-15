@@ -1,4 +1,7 @@
 {block content}
+    <div>
+        <h1 n:block=title>cURL</h1>
+    </div>
     <table class="table table-striped">
         <thead>
         <tr>
@@ -9,11 +12,6 @@
         </tr>
         </thead>
         <tbody>
-{*        <tr>*}
-{*            <td>*}
-{*                {$count}*}
-{*            </td>*}
-{*        </tr>*}
         <tr n:foreach="$data as $row">
 
             <td>{$row['Mfr_Name']}</td>

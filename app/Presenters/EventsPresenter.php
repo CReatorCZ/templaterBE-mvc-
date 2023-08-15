@@ -369,11 +369,8 @@ overflow: hidden;
         $result = curl_exec($ch);
         curl_close($ch);
 
-        //var_dump(json_decode($result, true));
         $data = json_decode($result, true);
 
         $this->template->data = $data['Results'];
-
     }
-
 }
