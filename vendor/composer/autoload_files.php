@@ -18,6 +18,7 @@ return array(
     '7b11c4dc42b3b3023073cb14e519683c' => $vendorDir . '/ralouphie/getallheaders/src/getallheaders.php',
     '801c31d8ed748cfa537fa45402288c95' => $vendorDir . '/psy/psysh/src/functions.php',
     'e3b2795a8a512b6083af088fb53afe6c' => $vendorDir . '/codeception/codeception/functions.php',
+    '2cffec82183ee1cea088009cef9a6fc3' => $vendorDir . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
     '37a3dc5111fe8f707ab4c132ef1dbc62' => $vendorDir . '/guzzlehttp/guzzle/src/functions_include.php',
     'd507e002f7fce7f0c6dbf1f22edcb902' => $vendorDir . '/tracy/tracy/src/Tracy/functions.php',
 );

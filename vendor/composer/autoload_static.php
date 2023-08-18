@@ -19,6 +19,7 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'e3b2795a8a512b6083af088fb53afe6c' => __DIR__ . '/..' . '/codeception/codeception/functions.php',
+        '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'd507e002f7fce7f0c6dbf1f22edcb902' => __DIR__ . '/..' . '/tracy/tracy/src/Tracy/functions.php',
     );
@@ -27,6 +28,10 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         's' => 
         array (
             'setasign\\Fpdi\\' => 14,
+        ),
+        'Z' => 
+        array (
+            'ZipStream\\' => 10,
         ),
         'S' => 
         array (
@@ -50,17 +55,20 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         'P' => 
         array (
             'Psy\\' => 4,
+            'Psr\\SimpleCache\\' => 16,
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
             'Psr\\Http\\Client\\' => 16,
             'Psr\\EventDispatcher\\' => 20,
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
+            'PhpOffice\\PhpSpreadsheet\\' => 25,
         ),
         'M' => 
         array (
             'Mpdf\\PsrLogAwareTrait\\' => 22,
             'Mpdf\\' => 5,
+            'Matrix\\' => 7,
             'Masterminds\\' => 12,
         ),
         'G' => 
@@ -75,6 +83,7 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         ),
         'C' => 
         array (
+            'Complex\\' => 8,
             'Codeception\\Extension\\' => 22,
             'Codeception\\' => 12,
         ),
@@ -88,6 +97,10 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         'setasign\\Fpdi\\' => 
         array (
             0 => __DIR__ . '/..' . '/setasign/fpdi/src',
+        ),
+        'ZipStream\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/maennchen/zipstream-php/src',
         ),
         'Symfony\\Thanks\\' => 
         array (
@@ -157,6 +170,10 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         array (
             0 => __DIR__ . '/..' . '/psy/psysh/src',
         ),
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
         'Psr\\Log\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
@@ -182,6 +199,10 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
+        'PhpOffice\\PhpSpreadsheet\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/phpoffice/phpspreadsheet/src/PhpSpreadsheet',
+        ),
         'Mpdf\\PsrLogAwareTrait\\' => 
         array (
             0 => __DIR__ . '/..' . '/mpdf/psr-log-aware-trait/src',
@@ -189,6 +210,10 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         'Mpdf\\' => 
         array (
             0 => __DIR__ . '/..' . '/mpdf/mpdf/src',
+        ),
+        'Matrix\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/markbaker/matrix/classes/src',
         ),
         'Masterminds\\' => 
         array (
@@ -210,6 +235,10 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         array (
             0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
         ),
+        'Complex\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/markbaker/complex/classes/src',
+        ),
         'Codeception\\Extension\\' => 
         array (
             0 => __DIR__ . '/..' . '/codeception/codeception/ext',
@@ -226,6 +255,13 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
     );
 
     public static $prefixesPsr0 = array (
+        'H' => 
+        array (
+            'HTMLPurifier' => 
+            array (
+                0 => __DIR__ . '/..' . '/ezyang/htmlpurifier/library',
+            ),
+        ),
         'B' => 
         array (
             'Behat\\Gherkin' => 
@@ -281,7 +317,6 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         'Latte\\Compiler\\Nodes\\Html\\BogusTagNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Html/BogusTagNode.php',
         'Latte\\Compiler\\Nodes\\Html\\CommentNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Html/CommentNode.php',
         'Latte\\Compiler\\Nodes\\Html\\ElementNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Html/ElementNode.php',
-        'Latte\\Compiler\\Nodes\\Html\\QuotedValue' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Html/QuotedValue.php',
         'Latte\\Compiler\\Nodes\\NopNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/NopNode.php',
         'Latte\\Compiler\\Nodes\\Php\\ArgumentNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/ArgumentNode.php',
         'Latte\\Compiler\\Nodes\\Php\\ArrayItemNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/ArrayItemNode.php',
@@ -318,6 +353,7 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         'Latte\\Compiler\\Nodes\\Php\\Expression\\StaticCallNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/Expression/StaticCallNode.php',
         'Latte\\Compiler\\Nodes\\Php\\Expression\\StaticCallableNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/Expression/StaticCallableNode.php',
         'Latte\\Compiler\\Nodes\\Php\\Expression\\StaticPropertyFetchNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/Expression/StaticPropertyFetchNode.php',
+        'Latte\\Compiler\\Nodes\\Php\\Expression\\TemporaryNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/Expression/TemporaryNode.php',
         'Latte\\Compiler\\Nodes\\Php\\Expression\\TernaryNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/Expression/TernaryNode.php',
         'Latte\\Compiler\\Nodes\\Php\\Expression\\UnaryOpNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/Expression/UnaryOpNode.php',
         'Latte\\Compiler\\Nodes\\Php\\Expression\\VariableNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/Expression/VariableNode.php',
@@ -325,6 +361,8 @@ class ComposerStaticInitbaffb8a8445739b6af190f33738c6458
         'Latte\\Compiler\\Nodes\\Php\\IdentifierNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/IdentifierNode.php',
         'Latte\\Compiler\\Nodes\\Php\\InterpolatedStringPartNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/InterpolatedStringPartNode.php',
         'Latte\\Compiler\\Nodes\\Php\\IntersectionTypeNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/IntersectionTypeNode.php',
+        'Latte\\Compiler\\Nodes\\Php\\ListItemNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/ListItemNode.php',
+        'Latte\\Compiler\\Nodes\\Php\\ListNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/ListNode.php',
         'Latte\\Compiler\\Nodes\\Php\\MatchArmNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/MatchArmNode.php',
         'Latte\\Compiler\\Nodes\\Php\\ModifierNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/ModifierNode.php',
         'Latte\\Compiler\\Nodes\\Php\\NameNode' => __DIR__ . '/..' . '/latte/latte/src/Latte/Compiler/Nodes/Php/NameNode.php',

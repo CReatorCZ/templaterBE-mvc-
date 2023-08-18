@@ -19,8 +19,8 @@ class Engine
 {
 	use Strict;
 
-	public const VERSION = '3.0.6';
-	public const VERSION_ID = 30006;
+	public const VERSION = '3.0.7';
+	public const VERSION_ID = 30007;
 
 	/** @deprecated use ContentType::* */
 	public const
@@ -44,6 +44,7 @@ class Engine
 	private bool $strictTypes = false;
 	private ?Policy $policy = null;
 	private bool $sandboxed = false;
+	private ?string $phpBinary = null;
 
 
 	public function __construct()
@@ -124,6 +125,10 @@ class Engine
 			}
 
 			throw $e->setSource($source, $name);
+		}
+
+		if ($this->phpBinary) {
+			Compiler\PhpHelpers::checkCode($this->phpBinary, $code, "(compiled $name)");
 		}
 
 		return $code;
@@ -541,6 +546,13 @@ class Engine
 		}
 
 		return $this->loader;
+	}
+
+
+	public function enablePhpLinter(string $phpBinary): static
+	{
+		$this->phpBinary = $phpBinary;
+		return $this;
 	}
 
 

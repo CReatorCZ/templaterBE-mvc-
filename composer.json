@@ -26,7 +26,9 @@
     "nette/utils": "^4.0",
     "latte/latte": "^3.0",
     "tracy/tracy": "^2.9",
-    "mpdf/mpdf": "^v8.1.6"
+    "mpdf/mpdf": "^v8.1.6",
+    "phpoffice/phpspreadsheet": "^1.29",
+    "ext-curl": "*"
   },
   "require-dev": {
     "nette/tester": "^2.5",

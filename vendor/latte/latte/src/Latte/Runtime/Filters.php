@@ -75,9 +75,12 @@ class Filters
 	public static function escapeHtmlTag($s): string
 	{
 		$s = (string) $s;
-		return preg_match('#^[a-z0-9:-]+$#i', $s)
-			? $s
-			: '"' . self::escapeHtmlAttr($s) . '"';
+		$s = htmlspecialchars($s, ENT_QUOTES | ENT_HTML5 | ENT_SUBSTITUTE, 'UTF-8');
+		return preg_replace_callback(
+			'#[=/\s]#',
+			fn($m) => '&#' . ord($m[0]) . ';',
+			$s,
+		);
 	}
 
 
@@ -122,10 +125,12 @@ class Filters
 	 */
 	public static function escapeXmlTag($s): string
 	{
-		$s = (string) $s;
-		return preg_match('#^[a-z0-9:-]+$#i', $s)
-			? $s
-			: '"' . self::escapeXml($s) . '"';
+		$s = self::escapeXml((string) $s);
+		return preg_replace_callback(
+			'#[=/\s]#',
+			fn($m) => '&#' . ord($m[0]) . ';',
+			$s,
+		);
 	}
 
 
@@ -207,24 +212,6 @@ class Filters
 	public static function convertHtmlToHtmlAttr(string $s): string
 	{
 		return self::escapeHtmlAttr($s, false);
-	}
-
-
-	/**
-	 * Converts HTML text to unquoted attribute. The quotation marks need to be escaped.
-	 */
-	public static function convertHtmlToUnquotedAttr(string $s): string
-	{
-		return '"' . self::escapeHtmlAttr($s, false) . '"';
-	}
-
-
-	/**
-	 * Converts HTML quoted attribute to unquoted.
-	 */
-	public static function convertHtmlAttrToUnquotedAttr(string $s): string
-	{
-		return '"' . $s . '"';
 	}
 
 

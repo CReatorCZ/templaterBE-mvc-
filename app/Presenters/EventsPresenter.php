@@ -2,7 +2,6 @@
 
 namespace App\Presenters;
 
-
 use App\Classes\CreatePerson;
 use App\Classes\DeletePerson;
 use App\Classes\ExportDatabase;
@@ -11,6 +10,7 @@ use App\Classes\ImportDatabase;
 use App\Classes\MyValidators;
 use App\Classes\UpdatePerson;
 use App\Classes\CreatePDF;
+use Nette\Application\AbortException;
 use Nette\Application\UI\Form;
 use Nette\Application\UI\Presenter;
 use Nette\DI\Attributes\Inject;
@@ -154,7 +154,10 @@ overflow: hidden;
     {
 
         if (!$this->getUser()->isLoggedIn()) {
-            $this->redirect('Sign:in');
+            try {
+                $this->redirect('Sign:in');
+            } catch (AbortException $e) {
+            }
         }
 
         $this->template->variable = $this->getList->getList();
